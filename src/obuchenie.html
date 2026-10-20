@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html', {
+  "title": "Обучение — студия Нины Заславской",
+  "description": "Курс перманентного макияжа с нуля у Нины Заславской: брови, губы, веки, практика на моделях, сертификат и разбор первых клиентов."
+})
+
+<body class="page__body" data-page="obuchenie">
+  <div class="site-container">
+  @include('partials/header.html')
+
+  <main>
+    <header class="pagehead">
+      <div class="frame pagehead__row">
+        <div>
+          <p class="kicker">Курс в студии</p>
+          <h1>Рука ставится здесь</h1>
+        </div>
+        <div>
+          <p class="pagehead__lead">С нуля до самостоятельной процедуры. Сначала учимся читать лицо, потом берём аппарат. Программу и стоимость называем по телефону: курс собирается под вашу руку, а не по одному прайсу на всех.</p>
+          <button class="btn btn-reset" type="button" data-open="booking" data-service="Обучение">Получить программу
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="frame syllabus">
+      <figure>
+        <img src="img/training-class.jpg" alt="Занятие по перманентному макияжу в студии">
+        <figcaption>Казань, ул. Островского, 39Б</figcaption>
+      </figure>
+      <div>
+        <h2>Что входит в руку</h2>
+        <dl>
+          <div>
+            <dt>Брови</dt>
+            <dd>Волосок, пудра и смешанная техника. Форму собираем по кости лица, не по картинке из ленты.</dd>
+          </div>
+          <div>
+            <dt>Губы</dt>
+            <dd>Акварель, мягкий оттенок, объём. Учимся не обводить рот жёстким контуром.</dd>
+          </div>
+          <div>
+            <dt>Веки</dt>
+            <dd>Межресничка, стрелка, растушёвка. Толщина линии зависит от глаза, а не от шаблона.</dd>
+          </div>
+          <div>
+            <dt>Пигмент</dt>
+            <dd>Как цвет ведёт себя на коже и почему яркий флакон часто старит лицо после заживления.</dd>
+          </div>
+          <div>
+            <dt>Клиент</dt>
+            <dd>Эскиз, согласие, уход и что отвечать на седьмой день, когда оттенок ещё не сел.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="forwhom">
+      <div class="frame forwhom__grid">
+        <article>
+          <h2>Если начинаете</h2>
+          <p>Портфолио не нужно. Нужны спокойные руки и готовность смотреть на лицо дольше, чем на аппарат. Латекс — только чтобы понять глубину. Дальше работаете на модели, Нина останавливает там, где линия ещё плывёт.</p>
+        </article>
+        <article>
+          <h2>Если уже пробовали</h2>
+          <p>Приходите с фото своих работ. Разбираем, где уходит цвет, где форма не держит симметрию, где рука спешит. На модели отрабатываем именно этот провал, а не «весь перманент заново».</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="frame keeps">
+      <h2>Что остаётся после выпуска</h2>
+      <div class="keeps__grid">
+        <article>
+          <h3>Модели</h3>
+          <p>Процедуру ведёте сами. Рядом стоит преподаватель, а не запись урока.</p>
+        </article>
+        <article>
+          <h3>Сертификат</h3>
+          <p>Международного образца. Его отдают после практики, не после прослушанных лекций.</p>
+        </article>
+        <article>
+          <h3>Первые клиенты</h3>
+          <p>Фото заживления и вопросы из своей записи разбираем уже после курса.</p>
+        </article>
+      </div>
+      <button class="btn btn-reset" type="button" data-open="booking" data-service="Обучение">Оставить номер для программы
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/sheet.html')
+  @include('partials/booking.html')
+  </div>
+</body>
+</html>

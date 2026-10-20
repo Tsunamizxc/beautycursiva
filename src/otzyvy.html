@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html', {
+  "title": "Отзывы — студия Нины Заславской",
+  "description": "Отзывы клиентов студии перманентного макияжа Нины Заславской в Казани."
+})
+
+<body class="page__body" data-page="otzyvy">
+  <div class="site-container">
+  @include('partials/header.html')
+
+  <main>
+    <header class="pagehead">
+      <div class="frame pagehead__row">
+        <div>
+          <p class="kicker">Отзывы</p>
+          <h1>После процедуры пишут коротко</h1>
+        </div>
+        <p class="pagehead__lead">Здесь нет длинных историй «я боялась, а теперь новая я». Люди отмечают то, что осталось своим: бровь, оттенок, линию ресниц.</p>
+      </div>
+    </header>
+
+    <section class="frame voice">
+      <figure>
+        <img src="img/client-anna.jpg" alt="Анна">
+      </figure>
+      <blockquote>
+        <p>«Натуральный результат. Брови выглядят очень естественно. Спасибо за бережный подход.»</p>
+        <footer>Анна · брови</footer>
+      </blockquote>
+    </section>
+
+    <section class="frame letters" aria-label="Ещё отзывы">
+      <article class="letter">
+        <span>Губы</span>
+        <h2>Екатерина</h2>
+        <p>Губы получились нежными и аккуратными. Именно такой оттенок я хотела.</p>
+      </article>
+      <article class="letter">
+        <span>Веки</span>
+        <h2>Мария</h2>
+        <p>Межресничка выглядит так, будто ресницы всегда были гуще. Очень деликатная работа.</p>
+      </article>
+      <article class="letter">
+        <span>Брови</span>
+        <h2>Дарья</h2>
+        <p>Форму бровей подобрали под лицо. Утром больше не беру карандаш.</p>
+      </article>
+      <article class="letter">
+        <span>Губы</span>
+        <h2>Ольга</h2>
+        <p>Цвет сел спокойно. Помаду теперь беру только вечером, днём хватает своего оттенка.</p>
+      </article>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/sheet.html')
+  @include('partials/booking.html')
+  </div>
+</body>
+</html>

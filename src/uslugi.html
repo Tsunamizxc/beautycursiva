@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html', {
+  "title": "Услуги — студия Нины Заславской",
+  "description": "Перманентный макияж бровей, губ и век в студии Нины Заславской, Казань. Форма по кости лица, цвет по коже."
+})
+
+<body class="page__body" data-page="uslugi">
+  <div class="site-container">
+  @include('partials/header.html')
+
+  <main>
+    <header class="pagehead">
+      <div class="frame pagehead__row">
+        <div>
+          <p class="kicker">Услуги студии</p>
+          <h1>Лицо остаётся вашим</h1>
+        </div>
+        <p class="pagehead__lead">Брови, губы и веки. Форму собираем по кости, цвет — по коже. Яркий макияж здесь не рисуют: линия должна выглядеть так, будто была всегда.</p>
+      </div>
+    </header>
+
+    <div class="frame service-board">
+      <nav class="service-index" aria-label="Зоны">
+        <a class="is-on" href="#brovi">Брови <span>01</span></a>
+        <a href="#guby">Губы <span>02</span></a>
+        <a href="#veki">Веки <span>03</span></a>
+      </nav>
+
+      <div>
+        <article class="service-piece" id="brovi">
+          <figure class="ba">
+            <img class="ba__after" src="img/brows-after.jpg" alt="Брови после перманентного макияжа">
+            <img class="ba__before" src="img/brows-before.jpg" alt="">
+            <span class="ba__line" aria-hidden="true"></span>
+            <span class="ba__handle" aria-hidden="true"></span>
+            <span class="ba__tag ba__tag--before">До</span>
+            <span class="ba__tag ba__tag--after">После</span>
+            <input class="ba__range" type="range" min="8" max="92" value="50" aria-label="Сдвиньте, чтобы сравнить брови до и после">
+          </figure>
+          <div>
+            <p class="kicker">01</p>
+            <h2>Брови</h2>
+            <p>Волосок, пудра или смешанная техника — выбор зависит от того, сколько своих волос уже есть и какой характер у лица. Сначала рисуем форму карандашом и смотрим её при дневном свете.</p>
+            <dl class="spec">
+              <div><dt>Техники</dt><dd>Волосковая, пудровая, смешанная</dd></div>
+              <div><dt>В студии</dt><dd>Около двух часов, с эскизом</dd></div>
+              <div><dt>Дальше</dt><dd>Коррекцию назначаем после заживления</dd></div>
+            </dl>
+            <button class="btn btn-reset" type="button" data-open="booking" data-service="Брови">Записаться на брови
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="service-piece" id="guby">
+          <figure class="ba">
+            <img class="ba__after" src="img/lips-after.jpg" alt="Губы после перманентного макияжа">
+            <img class="ba__before" src="img/lips-before.jpg" alt="">
+            <span class="ba__line" aria-hidden="true"></span>
+            <span class="ba__handle" aria-hidden="true"></span>
+            <span class="ba__tag ba__tag--before">До</span>
+            <span class="ba__tag ba__tag--after">После</span>
+            <input class="ba__range" type="range" min="8" max="92" value="50" aria-label="Сдвиньте, чтобы сравнить губы до и после">
+          </figure>
+          <div>
+            <p class="kicker">02</p>
+            <h2>Губы</h2>
+            <p>Акварель, мягкий оттенок или лёгкий объём. Контур не обводим жёсткой линией: цвет выходит из своего тона губ и остаётся спокойным без помады.</p>
+            <dl class="spec">
+              <div><dt>Техники</dt><dd>Акварель, нежный оттенок, 3D-объём</dd></div>
+              <div><dt>Оттенок</dt><dd>Подбираем к коже, не к тренду сезона</dd></div>
+              <div><dt>Дальше</dt><dd>Цвет садится после восстановления</dd></div>
+            </dl>
+            <button class="btn btn-reset" type="button" data-open="booking" data-service="Губы">Записаться на губы
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="service-piece" id="veki">
+          <figure class="ba">
+            <img class="ba__after" src="img/liner-after.jpg" alt="Веки после межресничной стрелки">
+            <img class="ba__before" src="img/liner-before.jpg" alt="">
+            <span class="ba__line" aria-hidden="true"></span>
+            <span class="ba__handle" aria-hidden="true"></span>
+            <span class="ba__tag ba__tag--before">До</span>
+            <span class="ba__tag ba__tag--after">После</span>
+            <input class="ba__range" type="range" min="8" max="92" value="50" aria-label="Сдвиньте, чтобы сравнить веки до и после">
+          </figure>
+          <div>
+            <p class="kicker">03</p>
+            <h2>Веки</h2>
+            <p>Межресничка уплотняет линию роста ресниц. Стрелка и растушёвка — если взгляд просит более ясную форму. Толщину решаем по глазу, а не по шаблону.</p>
+            <dl class="spec">
+              <div><dt>Техники</dt><dd>Межресничка, стрелка, растушёвка</dd></div>
+              <div><dt>Эффект</dt><dd>Ресницы кажутся гуще без ежедневной подводки</dd></div>
+              <div><dt>Дальше</dt><dd>Форму смотрим на консультации</dd></div>
+            </dl>
+            <button class="btn btn-reset" type="button" data-open="booking" data-service="Веки">Записаться на веки
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/sheet.html')
+  @include('partials/booking.html')
+  </div>
+</body>
+</html>

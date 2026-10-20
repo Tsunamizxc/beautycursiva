@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html', {
+  "title": "Работы — студия Нины Заславской",
+  "description": "До и после перманентного макияжа бровей, губ и век в студии Нины Заславской."
+})
+
+<body class="page__body" data-page="raboty">
+  <div class="site-container">
+  @include('partials/header.html')
+
+  <main>
+    <header class="pagehead">
+      <div class="frame pagehead__row">
+        <div>
+          <p class="kicker">Работы студии</p>
+          <h1>Сдвиньте границу</h1>
+        </div>
+        <p class="pagehead__lead">Слева — как было. Справа — как стало. Ползунок на снимке показывает шов между двумя кадрами, без отдельной «красивой» версии.</p>
+      </div>
+    </header>
+
+    <div class="frame">
+      <div class="filters" role="group" aria-label="Фильтр работ">
+        <button class="is-on" type="button" data-filter="all" aria-pressed="true">Все</button>
+        <button type="button" data-filter="brovi" aria-pressed="false">Брови</button>
+        <button type="button" data-filter="guby" aria-pressed="false">Губы</button>
+        <button type="button" data-filter="veki" aria-pressed="false">Веки</button>
+      </div>
+
+      <div class="folio">
+        <figure class="folio__span" data-kind="brovi">
+          <div class="ba">
+            <img class="ba__after" src="img/brows-after.jpg" alt="Брови после процедуры">
+            <img class="ba__before" src="img/brows-before.jpg" alt="">
+            <span class="ba__line" aria-hidden="true"></span>
+            <span class="ba__handle" aria-hidden="true"></span>
+            <span class="ba__tag ba__tag--before">До</span>
+            <span class="ba__tag ba__tag--after">После</span>
+            <input class="ba__range" type="range" min="8" max="92" value="50" aria-label="Сравнить брови до и после">
+          </div>
+          <figcaption><span>Брови</span><span>Волосковая техника</span></figcaption>
+        </figure>
+
+        <figure class="folio__tall" data-kind="guby">
+          <img src="img/lips-profession.jpg" alt="Крупный план губ после процедуры">
+          <figcaption><span>Губы</span><span>Свой оттенок</span></figcaption>
+        </figure>
+
+        <figure data-kind="veki">
+          <img src="img/service-eyes.jpg" alt="Межресничная стрелка">
+          <figcaption><span>Веки</span><span>Межресничка</span></figcaption>
+        </figure>
+
+        <figure class="folio__span" data-kind="guby">
+          <div class="ba">
+            <img class="ba__after" src="img/lips-after.jpg" alt="Губы после процедуры">
+            <img class="ba__before" src="img/lips-before.jpg" alt="">
+            <span class="ba__line" aria-hidden="true"></span>
+            <span class="ba__handle" aria-hidden="true"></span>
+            <span class="ba__tag ba__tag--before">До</span>
+            <span class="ba__tag ba__tag--after">После</span>
+            <input class="ba__range" type="range" min="8" max="92" value="50" aria-label="Сравнить губы до и после">
+          </div>
+          <figcaption><span>Губы</span><span>Акварель</span></figcaption>
+        </figure>
+
+        <figure data-kind="brovi">
+          <img src="img/service-brows.jpg" alt="Волосковые брови">
+          <figcaption><span>Брови</span><span>Форма по лицу</span></figcaption>
+        </figure>
+
+        <figure data-kind="guby">
+          <img src="img/service-lips.jpg" alt="Акварельные губы">
+          <figcaption><span>Губы</span><span>Мягкий контур</span></figcaption>
+        </figure>
+
+        <figure class="folio__span" data-kind="veki">
+          <div class="ba">
+            <img class="ba__after" src="img/liner-after.jpg" alt="Веки после межресничной стрелки">
+            <img class="ba__before" src="img/liner-before.jpg" alt="">
+            <span class="ba__line" aria-hidden="true"></span>
+            <span class="ba__handle" aria-hidden="true"></span>
+            <span class="ba__tag ba__tag--before">До</span>
+            <span class="ba__tag ba__tag--after">После</span>
+            <input class="ba__range" type="range" min="8" max="92" value="50" aria-label="Сравнить веки до и после">
+          </div>
+          <figcaption><span>Веки</span><span>Линия ресниц</span></figcaption>
+        </figure>
+
+        <figure class="folio__span" data-kind="brovi">
+          <img src="img/eyes-before-after.jpg" alt="Брови до и после">
+          <figcaption><span>Брови</span><span>До и после в одном кадре</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/sheet.html')
+  @include('partials/booking.html')
+  </div>
+</body>
+</html>

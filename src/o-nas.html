@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html', {
+  "title": "О нас — студия Нины Заславской",
+  "description": "Нина Заславская, студия перманентного макияжа в Казани. Больше 15 лет практики, авторские методики и эскиз до процедуры."
+})
+
+<body class="page__body" data-page="o-nas">
+  <div class="site-container">
+  @include('partials/header.html')
+
+  <main>
+    <header class="pagehead">
+      <div class="frame pagehead__row">
+        <div>
+          <p class="kicker">Студия на Островского</p>
+          <h1>Нина Заславская</h1>
+        </div>
+        <p class="pagehead__lead">Больше 15 лет она делает перманент так, чтобы утром лицо не требовало карандаша. В Казани Нина ведёт сложные случаи и в соседнем кабинете ставит руку мастерам.</p>
+      </div>
+    </header>
+
+    <section class="frame portrait">
+      <figure>
+        <img src="img/nina-card.jpg" alt="Нина Заславская">
+        <span aria-hidden="true">Нина</span>
+      </figure>
+      <div class="portrait__copy">
+        <p>Новое лицо здесь не обещают. Сначала смотрят, что у вас уже есть: посадка глаз, свои волоски, тон губ. Эскиз рисуют при дневном свете и не берут аппарат, пока вы не скажете, что линия ваша.</p>
+        <p>Международный опыт в студии — не табличка на ресепшене. Это набор техник, в которых цвет не уходит в графит, а контур не становится чужим. Материалы берут те, что садятся в кожу, а не те, что ярко выглядят во флаконе.</p>
+        <p>Если случай сложный — асимметрия, старый перманент, почти нет своих бровей — его не отдают «на поток». Его смотрит Нина.</p>
+        <dl class="portrait__facts">
+          <div><dt>Практика</dt><dd>Больше 15 лет</dd></div>
+          <div><dt>Город</dt><dd>Казань</dd></div>
+          <div><dt>Адрес</dt><dd>Островского, 39Б</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <figure class="hall">
+      <img src="img/salon-interior.jpg" alt="Ресепшен студии с монограммой N">
+      <figcaption>Первый этаж, монограмма N</figcaption>
+    </figure>
+
+    <section class="frame method">
+      <div class="method__intro">
+        <h2>Из чего собран результат</h2>
+        <p>Пять вещей, которые в студии не заменяют друг друга. Если убрать одну, линия перестаёт быть вашей.</p>
+      </div>
+      <div class="method__list">
+        <article>
+          <h3>Международные мастера</h3>
+          <p>Техники собраны не в одном городе. В кресле это чувствуется по тому, как держат форму, а не по рассказу о поездках.</p>
+        </article>
+        <article>
+          <h3>Авторские методики</h3>
+          <p>Глубина и плотность штриха подобраны так, чтобы бровь не темнела через месяц и не пропадала через неделю.</p>
+        </article>
+        <article>
+          <h3>Премиальные материалы</h3>
+          <p>Пигмент выбирают под кожу. Модный оттенок сезона, который старит лицо, здесь не предлагают.</p>
+        </article>
+        <article>
+          <h3>Форма под вас</h3>
+          <p>Эскиз можно поправить. Процедуру не начинают, пока рисунок не совпал с тем, как вы себя видите.</p>
+        </article>
+        <article>
+          <h3>Коррекция после заживления</h3>
+          <p>Цвет в кресле и цвет через месяц — разные. Вторую встречу ставят, когда кожа уже показала правду.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="frame doors">
+      <a class="doors__main" href="uslugi.html">
+        <img src="img/service-brows.jpg" alt="Перманент бровей">
+        <span>Брови, губы и веки</span>
+      </a>
+      <div class="doors__side">
+        <a href="raboty.html">
+          <img src="img/lips-profession.jpg" alt="Результат на губах">
+          <span>Смотреть работы</span>
+        </a>
+        <a href="obuchenie.html">
+          <img src="img/training-class.jpg" alt="Обучение в студии">
+          <span>Учиться профессии</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="frame invite">
+      <h2>Консультация ничего не решает за вас</h2>
+      <p>На ней смотрят лицо и говорят, какая зона уместна. Записаться можно без обязательства делать процедуру в тот же день.</p>
+      <button class="btn btn-reset" type="button" data-open="booking" data-service="Консультация">Записаться к Нине
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/sheet.html')
+  @include('partials/booking.html')
+  </div>
+</body>
+</html>

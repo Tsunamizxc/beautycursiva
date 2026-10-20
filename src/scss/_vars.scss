@@ -1,0 +1,24 @@
+:root {
+  --font-family: "Onest", "Segoe UI", sans-serif;
+  --content-width: 160rem;
+  --container-offset: 4rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --light-color: #fff;
+
+  --bg: #f3eee6;
+  --paper: #fffcf8;
+  --ink: #2a241c;
+  --soft: #5e564c;
+  --muted: #8a8175;
+  --line: #e4dcd2;
+  --gold: #c4a36a;
+  --gold-deep: #a8884e;
+  --footer: #3c4934;
+  --serif: "Prata", "Times New Roman", serif;
+  --sans: "Onest", "Segoe UI", sans-serif;
+  --script: "Great Vibes", cursive;
+  --radius: 1.8rem;
+  --header: 7.4rem;
+  --container: 160rem;
+  --gutter: 4rem;
+}

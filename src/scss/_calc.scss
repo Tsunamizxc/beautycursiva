@@ -1,0 +1,14 @@
+@use "sass:math";
+
+html {
+  --refRes: 1900;
+  font-size: calc(100vw / var(--refRes) * 10);
+
+  @media (max-width: 64em) {
+    --refRes: 768;
+  }
+
+  @media (max-width: 33.125em) {
+    --refRes: 390 !important;
+  }
+}
