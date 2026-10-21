@@ -196,6 +196,9 @@
             </article>
           </div>
         </div>
+        <div class="container">
+          @include('partials/services-more.html')
+        </div>
       </section>
 
       <section class="lower" id="training">
@@ -224,10 +227,13 @@
                 Поддержка после обучения
               </li>
             </ul>
-            <article class="profession">
-              <img src="img/lips-profession.jpg" alt="Крупный план губ после процедуры">
-              <p>Профессия<br>с будущим</p>
-            </article>
+            <button class="profession btn-reset" type="button" data-open="lesson-dialog" aria-label="Смотреть мастер-класс по пудровому напылению бровей">
+              <img src="img/work-brow.jpg" alt="">
+              <span class="play" aria-hidden="true">
+                <svg viewBox="0 0 16 16"><path d="M6 4.2v7.6L12.2 8 6 4.2Z" fill="currentColor"/></svg>
+              </span>
+              <p>Мастер-класс<br>пудровые брови</p>
+            </button>
           </div>
         </div>
 
@@ -327,9 +333,7 @@
       </section>
 
       @include('partials/crew.html')
-      @include('partials/lesson.html')
-      @include('partials/extras.html')
-      @include('partials/reel.html')
+      @include('partials/invite.html')
       @include('partials/studios.html')
     </main>
 
@@ -338,6 +342,8 @@
     @include('partials/sheet.html')
 
     @include('partials/booking.html')
+
+    @include('partials/lesson-dialog.html')
 
     <dialog class="modal modal--wide" id="gallery">
       <button class="icon-btn modal__close btn-reset" type="button" data-close aria-label="Закрыть">

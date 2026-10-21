@@ -301,7 +301,7 @@ export default () => {
     window.addEventListener("resize", setRail);
   }
 
-  document.querySelectorAll(".feature, .card, .results, .services, .about, .train, .reviews, .footer").forEach((el) => {
+  document.querySelectorAll(".feature, .card, .results, .services, .about, .train, .reviews").forEach((el) => {
     el.classList.add("reveal");
   });
   const revealObserver = new IntersectionObserver((entries) => {
