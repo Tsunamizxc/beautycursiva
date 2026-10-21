@@ -1,4 +1,5 @@
 import Swiper, { Autoplay, EffectFade } from "swiper";
+import { Fancybox } from "@fancyapps/ui";
 
 const autoplay = {
   delay: 5000,
@@ -300,6 +301,8 @@ export default () => {
     window.addEventListener("scroll", setRail, { passive: true });
     window.addEventListener("resize", setRail);
   }
+
+  Fancybox.bind("[data-fancybox]");
 
   document.querySelectorAll(".feature, .card, .results, .services, .about, .train, .reviews").forEach((el) => {
     el.classList.add("reveal");

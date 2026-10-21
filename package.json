@@ -54,6 +54,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^6.1.15",
     "@popperjs/core": "^2.11.2",
     "aos": "^2.3.4",
     "choices.js": "^11.0.2",

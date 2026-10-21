@@ -600,7 +600,7 @@ button,
 .about {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(rem(280), 40%) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(rem(280), 40%);
   align-items: stretch;
   padding: 0;
   overflow: hidden;
@@ -626,7 +626,7 @@ button,
   grid-template-columns: 1.05fr 0.72fr;
   gap: rem(20) rem(28);
   align-items: center;
-  padding: rem(22) rem(90) rem(22) rem(28);
+  padding: rem(22) rem(28) rem(22) rem(90);
 }
 .about__copy {
   max-width: rem(500);
@@ -656,7 +656,8 @@ button,
 .about__portrait {
   position: absolute;
   z-index: 0;
-  right: rem(380);
+  left: auto;
+  right: rem(40);
   bottom: 0;
   height: 108%;
   width: auto;
@@ -672,7 +673,7 @@ button,
   justify-content: center;
   gap: rem(14);
   width: rem(470);
-  padding-left: rem(184);
+  padding-left: 0;
 }
 .master h3 {
   font-family: var(--serif);
@@ -1134,7 +1135,7 @@ section[id], footer[id] { scroll-margin-top: rem(86); }
     height: rem(220);
   }
   .about {
-    grid-template-columns: minmax(rem(240), 34%) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(rem(240), 34%);
   }
   .about__grid {
     grid-template-columns: 1fr;
@@ -1143,6 +1144,7 @@ section[id], footer[id] { scroll-margin-top: rem(86); }
   }
   .about__portrait {
     right: rem(20);
+    left: auto;
     height: 100%;
   }
   .about__copy { max-width: none; }

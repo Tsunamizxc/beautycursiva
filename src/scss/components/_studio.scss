@@ -145,7 +145,6 @@
 
 .crew-director__photo {
   overflow: hidden;
-  background: #e6e1d6;
 }
 
 .crew-director__photo img {
@@ -312,11 +311,21 @@
   margin: 0;
 }
 
+.crew-certs__grid a {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
 .crew-certs__grid img {
   width: 100%;
   height: rem(190);
   object-fit: cover;
-  border-radius: var(--radius);
+  transition: transform 0.45s ease;
+}
+
+.crew-certs__grid a:hover img {
+  transform: scale(1.04);
 }
 
 .crew-certs__grid figcaption {
@@ -429,6 +438,11 @@
   .offers,
   .crew,
   .studios { padding: rem(56) 0; }
+
+  .offer__body,
+  .offer--side {
+    padding: rem(34) rem(20) rem(32);
+  }
 
   .offers__head,
   .studios__head {
