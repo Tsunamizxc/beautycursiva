@@ -29,23 +29,26 @@
   margin-inline: auto;
 
   @include tablet {
-    padding: 0 rem(20);
+    padding-inline: rem(20);
   }
 }
 
-body:not([data-page="home"]) main {
+main {
   display: flex;
   flex-direction: column;
-  gap: rem(80);
-  padding-bottom: rem(80);
+  padding-bottom: rem(40);
 }
 
-body[data-page="home"] main {
-  padding-bottom: rem(80);
+main > * {
+  padding-block: rem(40);
+}
+
+main > .hero {
+  padding-block: 0;
 }
 
 .pagehead {
-  padding: calc(var(--header) + 5.6rem) 0 0;
+  padding: calc(var(--header) + 5.6rem) 0 rem(40);
 }
 
 .kicker {
@@ -533,7 +536,6 @@ body[data-page="home"] main {
 
 .creed {
   margin: 0;
-  padding: rem(80) 0;
   background: var(--footer);
   color: #f4efe6;
 }
@@ -642,7 +644,6 @@ body[data-page="home"] main {
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 5rem;
   align-items: center;
-  padding: rem(80) 0;
 }
 
 .approach figure { margin: 0; }
@@ -745,7 +746,6 @@ body[data-page="home"] main {
   .visit__place,
   .visit__form { padding: 3.2rem 2rem; }
   .room figcaption { left: 2rem; right: 2rem; }
-  .creed { padding: rem(48) 0; }
   .teach img,
   .approach img { height: 28rem; }
   .reach { flex-direction: column; align-items: flex-start; }
@@ -753,11 +753,21 @@ body[data-page="home"] main {
   .day,
   .teach,
   .prep { gap: 2rem; }
-  .approach { padding: rem(48) 0; }
 
-  body:not([data-page="home"]) main {
-    gap: rem(56);
-    padding-bottom: rem(56);
+  main {
+    padding-bottom: rem(28);
+  }
+
+  main > * {
+    padding-block: rem(28);
+  }
+
+  main > .hero {
+    padding-block: 0;
+  }
+
+  .pagehead {
+    padding-bottom: rem(28);
   }
 }
 

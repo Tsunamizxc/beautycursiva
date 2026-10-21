@@ -1,11 +1,3 @@
-.offers,
-.crew,
-.studios,
-.comfort,
-.feedback {
-  padding: rem(80) 0;
-}
-
 .crew {
   background-color: rgba(246, 242, 235, 0.92);
   border-top: rem(1) solid rgba(92, 62, 24, 0.28);
@@ -520,12 +512,6 @@
 }
 
 @media (max-width: 50em) {
-  .offers,
-  .crew,
-  .studios,
-  .comfort,
-  .feedback { padding: rem(56) 0; }
-
   .comfort__head {
     flex-direction: column;
     align-items: flex-start;

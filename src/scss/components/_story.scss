@@ -86,7 +86,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
-  padding: rem(80) 0;
 }
 
 .forwhom p {
@@ -95,10 +94,6 @@
   font-size: 1.7rem;
   line-height: 1.6;
   color: rgba(244, 239, 230, 0.82);
-}
-
-.keeps {
-  padding: rem(80) 0;
 }
 
 .keeps__grid {
