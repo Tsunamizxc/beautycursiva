@@ -136,9 +136,25 @@ export default () => {
     setTimeout(finish, 500);
   }
 
+  function setLesson(active) {
+    const holder = document.querySelector("#lesson-frame");
+    if (!holder) return;
+    if (!active) {
+      holder.replaceChildren();
+      return;
+    }
+    const frame = document.createElement("iframe");
+    frame.src = "https://www.youtube-nocookie.com/embed/oaCGCBNll_8?autoplay=1";
+    frame.title = "Мастер-класс — пудровое напыление бровей от А до Я";
+    frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+    frame.setAttribute("allowfullscreen", "");
+    holder.replaceChildren(frame);
+  }
+
   document.querySelectorAll("[data-open]").forEach((trigger) => {
     trigger.addEventListener("click", () => {
       const id = trigger.getAttribute("data-open");
+      if (id === "lesson-dialog") setLesson(true);
       if (id === "booking") {
         const booking = document.querySelector("#booking");
         resetScope(booking && booking.querySelector(".form-scope"));
@@ -170,6 +186,7 @@ export default () => {
         storiesSwiper.autoplay.stop();
         if (storiesEl) storiesEl.classList.remove("is-playing");
       }
+      if (dialog.id === "lesson-dialog") setLesson(false);
     });
   });
 
