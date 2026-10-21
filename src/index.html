@@ -71,6 +71,8 @@
         </div>
       </section>
 
+      @include('partials/offers.html')
+
       <section class="results" id="results">
         <div class="container results__wrap">
           <div class="swiper results-swiper">
@@ -196,31 +198,6 @@
         </div>
       </section>
 
-      <section class="about" id="about">
-        <img class="about__portrait" src="img/nina-card.png" alt="">
-        <img class="about__salon" src="img/salon-interior.jpg" alt="Ресепшен студии с монограммой N">
-        <div class="about__grid">
-          <div class="about__copy">
-            <p class="eyebrow">О нас</p>
-            <h2>Красота начинается с доверия</h2>
-            <ul class="checks">
-              <li>Международные мастера</li>
-              <li>Авторские методики</li>
-              <li>Премиальные материалы</li>
-              <li>Индивидуальный подбор формы</li>
-              <li>Гарантия результата</li>
-            </ul>
-          </div>
-          <article class="master">
-            <h3>Нина Заславская</h3>
-            <p>Мастер, который превратил перманентный макияж в искусство.</p>
-            <a class="text-link" href="o-nas.html">Узнать больше
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </article>
-        </div>
-      </section>
-
       <section class="lower" id="training">
         <div class="train">
           <img class="train__photo" src="img/training-class.jpg" alt="Обучение перманентному макияжу в студии">
@@ -324,7 +301,31 @@
         </div>
       </section>
 
-      @include('partials/offers.html')
+      <section class="about" id="about">
+        <img class="about__portrait" src="img/nina-card.png" alt="">
+        <img class="about__salon" src="img/salon-interior.jpg" alt="Ресепшен студии с монограммой N">
+        <div class="about__grid">
+          <div class="about__copy">
+            <p class="eyebrow">О нас</p>
+            <h2>Красота начинается с доверия</h2>
+            <ul class="checks">
+              <li>Международные мастера</li>
+              <li>Авторские методики</li>
+              <li>Премиальные материалы</li>
+              <li>Индивидуальный подбор формы</li>
+              <li>Гарантия результата</li>
+            </ul>
+          </div>
+          <article class="master">
+            <h3>Нина Заславская</h3>
+            <p>Мастер, который превратил перманентный макияж в искусство.</p>
+            <a class="text-link" href="o-nas.html">Узнать больше
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+        </div>
+      </section>
+
       @include('partials/pledge.html')
       @include('partials/crew.html')
       @include('partials/lesson.html')
