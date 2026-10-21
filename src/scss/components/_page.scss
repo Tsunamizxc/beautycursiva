@@ -493,6 +493,10 @@ body[data-page="home"] .about {
   display: none !important;
 }
 
+body[data-page="home"] .invite {
+  margin-top: rem(80);
+}
+
 .services { padding: rem(80) 0; }
 .services__grid {
   display: grid;
@@ -534,6 +538,7 @@ body[data-page="home"] .about {
 
 .services-more {
   margin-top: rem(48);
+  margin-bottom: rem(8);
   padding-top: rem(36);
   border-top: rem(1) solid var(--line);
 }
@@ -685,7 +690,7 @@ body[data-page="home"] .about {
   display: grid;
   grid-template-columns: minmax(rem(320), 40%) minmax(0, 1fr);
   align-items: stretch;
-  margin-bottom: rem(56);
+  margin-bottom: rem(80);
 }
 .train__photo {
   width: 100%;

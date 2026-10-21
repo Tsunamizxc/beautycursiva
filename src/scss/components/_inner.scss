@@ -33,27 +33,19 @@
   }
 }
 
-.pagehead {
-  padding: calc(var(--header) + 5.6rem) 0 rem(48);
+body:not([data-page="home"]) main {
+  display: flex;
+  flex-direction: column;
+  gap: rem(80);
+  padding-bottom: rem(80);
 }
 
-.service-board,
-.folio,
-.voice,
-.day,
-.teach,
-.prep,
-.approach,
-.program,
-.studio,
-.book,
-.trail,
-.note-row,
-.portrait,
-.method,
-.doors,
-.measures {
+body[data-page="home"] main {
   padding-bottom: rem(80);
+}
+
+.pagehead {
+  padding: calc(var(--header) + 5.6rem) 0 0;
 }
 
 .kicker {
@@ -188,7 +180,7 @@
 .spec dd { margin: 0; }
 
 .course {
-  padding-bottom: rem(80);
+  margin: 0;
 }
 
 .program {
@@ -461,7 +453,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 6rem;
-  padding-bottom: rem(80);
 }
 
 .letter {
@@ -541,7 +532,7 @@
 }
 
 .creed {
-  margin: 0 0 rem(80);
+  margin: 0;
   padding: rem(80) 0;
   background: var(--footer);
   color: #f4efe6;
@@ -622,9 +613,8 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: rem(40);
   border-bottom: 1px solid var(--line);
-  margin-bottom: 0;
 }
 
 .reach__phone {
@@ -755,15 +745,20 @@
   .visit__place,
   .visit__form { padding: 3.2rem 2rem; }
   .room figcaption { left: 2rem; right: 2rem; }
-  .creed { margin-bottom: 4rem; padding: 4rem 0; }
+  .creed { padding: rem(48) 0; }
   .teach img,
   .approach img { height: 28rem; }
   .reach { flex-direction: column; align-items: flex-start; }
   .reach div { justify-items: start; }
   .day,
   .teach,
-  .prep { gap: 2rem; padding-bottom: 4.8rem; }
-  .approach { padding: 4rem 0; }
+  .prep { gap: 2rem; }
+  .approach { padding: rem(48) 0; }
+
+  body:not([data-page="home"]) main {
+    gap: rem(56);
+    padding-bottom: rem(56);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

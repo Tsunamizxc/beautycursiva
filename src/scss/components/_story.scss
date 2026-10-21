@@ -17,7 +17,6 @@
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
   gap: 5rem;
   align-items: start;
-  padding-bottom: rem(80);
 }
 
 .syllabus figure { margin: 0; }
@@ -87,8 +86,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
-  padding-top: rem(80);
-  padding-bottom: rem(80);
+  padding: rem(80) 0;
 }
 
 .forwhom p {
@@ -141,7 +139,6 @@
   grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
   gap: 5rem;
   align-items: end;
-  padding-bottom: rem(80);
 }
 
 .portrait figure {
@@ -195,7 +192,7 @@
 
 .hall {
   position: relative;
-  margin: 0 0 rem(80);
+  margin: 0;
 }
 
 .hall img {
@@ -222,7 +219,6 @@
   display: grid;
   grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
   gap: 5rem;
-  padding-bottom: rem(80);
 }
 
 .method__intro { position: sticky; top: calc(var(--header) + 2rem); align-self: start; }
@@ -245,7 +241,6 @@
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 1.2rem;
-  padding-bottom: rem(80);
 }
 
 .doors a {
@@ -286,7 +281,7 @@
   grid-template-columns: minmax(0, 1.45fr) minmax(22rem, 0.7fr);
   gap: 4rem;
   align-items: end;
-  margin: 0 auto rem(80);
+  margin: 0 auto;
   padding: 4.4rem 4.8rem 4rem;
   width: 100%;
   max-width: rem(1600);
@@ -342,7 +337,6 @@
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: 2rem;
   align-items: stretch;
-  padding-bottom: rem(80);
 }
 
 .book__form {
@@ -359,14 +353,24 @@
   min-height: 56rem;
   border-radius: var(--radius);
   overflow: hidden;
+  background: #d9d2c4;
 }
 
-.book__place img {
+.book__place img,
+.book__map {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  border: 0;
+}
+
+.book__place img {
   object-fit: cover;
+}
+
+.book__map {
+  display: block;
 }
 
 .book__pin {
@@ -392,7 +396,6 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 3rem;
-  padding-bottom: rem(80);
 }
 
 .trail article { padding-top: 1.2rem; border-top: 1px solid var(--gold); }
@@ -401,7 +404,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  padding-bottom: rem(80);
 }
 
 .note-row a {
@@ -448,7 +450,6 @@
   .invite {
     grid-template-columns: minmax(0, 1fr);
     gap: 2.4rem;
-    margin-bottom: 4rem;
     padding: 2.8rem 2rem 2.4rem;
   }
   .invite__sign { font-size: 7.2rem; }
