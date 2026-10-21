@@ -126,36 +126,98 @@ export default () => {
     });
   }
 
-  function openDialog(id) {
+  let scrollLockY = 0;
+  let scrollLocked = false;
+
+  function lockPageScroll() {
+    if (scrollLocked) return;
+    scrollLocked = true;
+    scrollLockY = window.scrollY || window.pageYOffset || 0;
+    const scrollbar = Math.max(0, window.innerWidth - document.documentElement.clientWidth);
+    document.documentElement.classList.add("is-modal-open");
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollLockY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+    if (scrollbar) document.body.style.paddingRight = `${scrollbar}px`;
+  }
+
+  function unlockPageScroll() {
+    if (!scrollLocked) return;
+    if (document.querySelector("dialog[open]")) return;
+    scrollLocked = false;
+    document.documentElement.classList.remove("is-modal-open");
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    document.body.style.paddingRight = "";
+    window.scrollTo(0, scrollLockY);
+  }
+
+  function openDialog(id, trigger) {
     const dialog = document.getElementById(id);
     if (!dialog) return;
     document.querySelectorAll("dialog[open]").forEach((current) => {
-      if (current !== dialog) {
-        current.classList.remove("is-open");
-        current.close();
-      }
+      if (current !== dialog) closeDialog(current, true);
     });
+    if (dialog._closeTimer) {
+      clearTimeout(dialog._closeTimer);
+      dialog._closeTimer = 0;
+    }
+    dialog.classList.remove("is-closing");
+    dialog._trigger = trigger || document.activeElement;
+    lockPageScroll();
     if (!dialog.open) dialog.showModal();
+    dialog.scrollTop = 0;
     requestAnimationFrame(() => {
-      requestAnimationFrame(() => dialog.classList.add("is-open"));
+      requestAnimationFrame(() => {
+        dialog.classList.add("is-open");
+        const focusTarget =
+          dialog.querySelector(".modal__close, [data-close]") ||
+          dialog.querySelector("input, button, select, textarea, a[href]");
+        if (focusTarget && typeof focusTarget.focus === "function") {
+          focusTarget.focus({ preventScroll: true });
+        }
+      });
     });
   }
 
-  function closeDialog(dialog) {
+  function closeDialog(dialog, instant) {
     if (!dialog || !dialog.open || dialog._closing) return;
     dialog._closing = true;
+    dialog.classList.add("is-closing");
     dialog.classList.remove("is-open");
+    const trigger = dialog._trigger;
     let settled = false;
     const finish = () => {
       if (settled) return;
       settled = true;
       dialog._closing = false;
+      dialog.classList.remove("is-closing");
+      if (dialog._closeTimer) {
+        clearTimeout(dialog._closeTimer);
+        dialog._closeTimer = 0;
+      }
       if (dialog.open) dialog.close();
+      if (trigger && typeof trigger.focus === "function") {
+        trigger.focus({ preventScroll: true });
+      }
+      unlockPageScroll();
     };
-    dialog.addEventListener("transitionend", (event) => {
-      if (event.target === dialog) finish();
-    }, { once: true });
-    setTimeout(finish, 500);
+    if (instant) {
+      finish();
+      return;
+    }
+    const onEnd = (event) => {
+      if (event.target !== dialog) return;
+      if (event.propertyName !== "opacity" && event.propertyName !== "transform") return;
+      finish();
+    };
+    dialog.addEventListener("transitionend", onEnd, { once: true });
+    dialog._closeTimer = setTimeout(finish, 520);
   }
 
   function setLesson(active) {
@@ -174,7 +236,8 @@ export default () => {
   }
 
   document.querySelectorAll("[data-open]").forEach((trigger) => {
-    trigger.addEventListener("click", () => {
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
       const id = trigger.getAttribute("data-open");
       if (id === "lesson-dialog") setLesson(true);
       if (id === "booking") {
@@ -189,26 +252,35 @@ export default () => {
         storiesSwiper.autoplay.start();
         if (storiesEl) storiesEl.classList.add("is-playing");
       }
-      openDialog(id === "reviews" ? "reviews-dialog" : id);
+      openDialog(id === "reviews" ? "reviews-dialog" : id, trigger);
       if (id === "video" && storiesSwiper) storiesSwiper.update();
     });
   });
 
   document.querySelectorAll("[data-close]").forEach((button) => {
-    button.addEventListener("click", () => closeDialog(button.closest("dialog")));
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      closeDialog(button.closest("dialog"));
+    });
   });
 
   document.querySelectorAll("dialog").forEach((dialog) => {
     dialog.addEventListener("click", (event) => {
       if (event.target === dialog) closeDialog(dialog);
     });
+    dialog.addEventListener("cancel", (event) => {
+      event.preventDefault();
+      closeDialog(dialog);
+    });
     dialog.addEventListener("close", () => {
-      dialog.classList.remove("is-open");
+      dialog.classList.remove("is-open", "is-closing");
+      dialog._closing = false;
       if (dialog.id === "video" && storiesSwiper) {
         storiesSwiper.autoplay.stop();
         if (storiesEl) storiesEl.classList.remove("is-playing");
       }
       if (dialog.id === "lesson-dialog") setLesson(false);
+      unlockPageScroll();
     });
   });
 
