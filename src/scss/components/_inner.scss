@@ -47,6 +47,10 @@ main > .hero {
   padding-block: 0;
 }
 
+main > .invite {
+  padding-block: 0;
+}
+
 .pagehead {
   padding: calc(var(--header) + 5.6rem) 0 rem(40);
 }
@@ -762,8 +766,13 @@ main > .hero {
     padding-block: rem(28);
   }
 
-  main > .hero {
+  main > .hero,
+  main > .invite {
     padding-block: 0;
+  }
+
+  main > .invite {
+    margin-block: rem(28);
   }
 
   .pagehead {
