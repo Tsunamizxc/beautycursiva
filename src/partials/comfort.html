@@ -1,32 +1,59 @@
 <section class="comfort" id="studio-photos" aria-label="Атмосфера студии">
   <div class="container">
     <div class="comfort__head">
-      <p class="eyebrow">Атмосфера студии</p>
-      <h2>Всё для вашего комфорта</h2>
-      <p>Максимальная забота о клиентах. Вам обязательно принесёт радость и процесс, и результат.</p>
+      <div>
+        <p class="eyebrow">Атмосфера студии</p>
+        <h2>Всё для вашего комфорта</h2>
+        <p>Максимальная забота о клиентах. Вам обязательно принесёт радость и процесс, и результат.</p>
+      </div>
+      <div class="comfort__nav" aria-label="Управление слайдером">
+        <button class="icon-btn btn-reset" id="prev-comfort" type="button" aria-label="Предыдущее фото">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.5 3.5 6 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn btn-reset" id="next-comfort" type="button" aria-label="Следующее фото">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5 10 8 5.5 12.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="comfort__rail" tabindex="0" aria-label="Фотографии студии, листайте вправо">
-    <figure class="comfort__shot">
-      <img src="img/studio-2.png" alt="Интерьер студии перманентного макияжа" loading="lazy">
-    </figure>
-    <figure class="comfort__shot">
-      <img src="img/studio-3.png" alt="Кабинет мастера" loading="lazy">
-    </figure>
-    <figure class="comfort__shot">
-      <img src="img/studio-4.png" alt="Рабочая зона студии" loading="lazy">
-    </figure>
-    <figure class="comfort__shot">
-      <img src="img/studio-5.png" alt="Детали интерьера студии" loading="lazy">
-    </figure>
-    <figure class="comfort__shot">
-      <img src="img/studio-6.jpg" alt="Пространство для клиентов" loading="lazy">
-    </figure>
-    <figure class="comfort__shot">
-      <img src="img/studio-7.png" alt="Зона ожидания" loading="lazy">
-    </figure>
-    <figure class="comfort__shot">
-      <img src="img/studio-8.png" alt="Студия Нины Заславской" loading="lazy">
-    </figure>
+
+    <div class="swiper comfort-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <figure class="comfort__shot">
+            <img src="img/studio-2.png" alt="Интерьер студии перманентного макияжа" loading="lazy">
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure class="comfort__shot">
+            <img src="img/studio-3.png" alt="Кабинет мастера" loading="lazy">
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure class="comfort__shot">
+            <img src="img/studio-4.png" alt="Рабочая зона студии" loading="lazy">
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure class="comfort__shot">
+            <img src="img/studio-5.png" alt="Детали интерьера студии" loading="lazy">
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure class="comfort__shot">
+            <img src="img/studio-6.jpg" alt="Пространство для клиентов" loading="lazy">
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure class="comfort__shot">
+            <img src="img/studio-7.png" alt="Зона ожидания" loading="lazy">
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure class="comfort__shot">
+            <img src="img/studio-8.png" alt="Студия Нины Заславской" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

@@ -37,8 +37,15 @@
 }
 
 .comfort__head {
-  max-width: rem(640);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: rem(24);
   margin-bottom: rem(36);
+}
+
+.comfort__head > div:first-child {
+  max-width: rem(640);
 }
 
 .comfort__head p:not(.eyebrow) {
@@ -48,21 +55,22 @@
   line-height: 1.55;
 }
 
-.comfort__rail {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(rem(280), 32vw);
-  gap: rem(14);
-  overflow-x: auto;
-  padding: 0 max(rem(20), calc((100vw - rem(1600)) / 2 + rem(20))) rem(8);
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+.comfort__nav {
+  display: flex;
+  gap: rem(8);
+  flex: none;
+}
+
+.comfort-swiper {
+  overflow: hidden;
+}
+
+.comfort-swiper .swiper-slide {
+  height: auto;
 }
 
 .comfort__shot {
   margin: 0;
-  scroll-snap-align: start;
   border-radius: var(--radius);
   overflow: hidden;
   background: #e6e1d6;
@@ -71,7 +79,7 @@
 .comfort__shot img {
   display: block;
   width: 100%;
-  height: rem(360);
+  height: rem(380);
   object-fit: cover;
 }
 
@@ -518,10 +526,9 @@
   .comfort,
   .feedback { padding: rem(56) 0; }
 
-  .comfort__rail {
-    grid-auto-columns: minmax(rem(240), 78vw);
-    padding-left: rem(20);
-    padding-right: rem(20);
+  .comfort__head {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .comfort__shot img { height: rem(280); }

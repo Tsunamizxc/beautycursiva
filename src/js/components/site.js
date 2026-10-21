@@ -1,4 +1,4 @@
-import Swiper, { Autoplay, EffectFade } from "swiper";
+import Swiper, { Autoplay, EffectFade, Navigation } from "swiper";
 import { Fancybox } from "@fancyapps/ui";
 
 const autoplay = {
@@ -75,6 +75,27 @@ export default () => {
       }
     });
     requestAnimationFrame(() => reviewsSwiper.update());
+  }
+
+  const comfortEl = document.querySelector(".comfort-swiper");
+  if (comfortEl) {
+    new Swiper(comfortEl, {
+      modules: [Autoplay, Navigation],
+      slidesPerView: 1.15,
+      spaceBetween: 14,
+      loop: true,
+      speed: 650,
+      grabCursor: true,
+      autoplay,
+      navigation: {
+        prevEl: "#prev-comfort",
+        nextEl: "#next-comfort"
+      },
+      breakpoints: {
+        640: { slidesPerView: 2.1, spaceBetween: 16 },
+        980: { slidesPerView: 3, spaceBetween: 18 }
+      }
+    });
   }
 
   const storiesEl = document.querySelector(".stories-swiper");
