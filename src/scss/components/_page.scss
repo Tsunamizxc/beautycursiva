@@ -489,6 +489,10 @@ button,
 .pager button:hover, .icon-btn:hover { border-color: var(--gold); background: #fff; transform: translateY(rem(-2)); }
 .pager svg, .icon-btn svg { width: rem(16); height: rem(16); }
 
+body[data-page="home"] .about {
+  display: none !important;
+}
+
 .services { padding: rem(80) 0; }
 .services__grid {
   display: grid;
@@ -993,7 +997,8 @@ button,
 .socials svg { width: rem(18); height: rem(18); }
 .socials a:hover { background: rgba(255, 255, 255, 0.08); }
 
-dialog {
+dialog.modal,
+dialog.sheet {
   padding: 0;
   border: 0;
   color: var(--ink);
@@ -1002,15 +1007,25 @@ dialog {
   transform: translateY(rem(18)) scale(0.98);
   transition: opacity 0.45s ease, transform 0.45s ease;
 }
-dialog.is-open {
+dialog.modal.is-open,
+dialog.sheet.is-open {
   opacity: 1;
   transform: none;
 }
-dialog::backdrop {
+dialog.modal::backdrop,
+dialog.sheet::backdrop {
   background: rgba(32, 26, 18, 0);
   transition: background 0.45s ease;
 }
-dialog.is-open::backdrop { background: rgba(32, 26, 18, 0.48); }
+dialog.modal.is-open::backdrop,
+dialog.sheet.is-open::backdrop { background: rgba(32, 26, 18, 0.48); }
+
+.fancybox__dialog,
+.fancybox__container {
+  opacity: 1;
+  transform: none;
+}
+
 .modal {
   width: min(rem(480), calc(100vw - rem(28)));
   border-radius: rem(22);

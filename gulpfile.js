@@ -241,7 +241,9 @@ const resources = () => {
 };
 
 const images = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`])
+  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`], {
+    ignore: [`${paths.srcImgFolder}/archive/**`, `${paths.srcImgFolder}/_certs_tmp/**`]
+  })
     .pipe(
       gulpif(
         isProd,
@@ -260,7 +262,9 @@ const images = () => {
 };
 
 const webpImages = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
+  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`], {
+    ignore: [`${paths.srcImgFolder}/archive/**`, `${paths.srcImgFolder}/_certs_tmp/**`]
+  })
     .pipe(webp())
     .pipe(dest(paths.buildImgFolder));
 };

@@ -4,6 +4,12 @@
   padding: rem(80) 0;
 }
 
+.crew {
+  background-color: rgba(246, 242, 235, 0.92);
+  border-top: rem(1) solid rgba(92, 62, 24, 0.28);
+  border-bottom: rem(1) solid rgba(92, 62, 24, 0.28);
+}
+
 .offers h2,
 .crew h2,
 .studios h2,
@@ -24,8 +30,7 @@
   max-width: min(12em, 100%);
 }
 
-.offers__head,
-.crew__head {
+.offers__head {
   margin-bottom: rem(36);
 }
 
@@ -152,7 +157,7 @@
   width: 100%;
   height: rem(480);
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 52%;
 }
 
 .crew-director__role {

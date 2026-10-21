@@ -17,7 +17,7 @@
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
   gap: 5rem;
   align-items: start;
-  padding-bottom: 7rem;
+  padding-bottom: rem(80);
 }
 
 .syllabus figure { margin: 0; }
@@ -87,8 +87,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: rem(80);
+  padding-bottom: rem(80);
 }
 
 .forwhom p {
@@ -100,7 +100,7 @@
 }
 
 .keeps {
-  padding: 7rem 0 8rem;
+  padding: rem(80) 0;
 }
 
 .keeps__grid {
@@ -141,7 +141,7 @@
   grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
   gap: 5rem;
   align-items: end;
-  padding-bottom: 6rem;
+  padding-bottom: rem(80);
 }
 
 .portrait figure {
@@ -195,7 +195,7 @@
 
 .hall {
   position: relative;
-  margin: 0 0 7rem;
+  margin: 0 0 rem(80);
 }
 
 .hall img {
@@ -222,7 +222,7 @@
   display: grid;
   grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
   gap: 5rem;
-  padding-bottom: 7rem;
+  padding-bottom: rem(80);
 }
 
 .method__intro { position: sticky; top: calc(var(--header) + 2rem); align-self: start; }
@@ -245,7 +245,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 1.2rem;
-  padding-bottom: 7rem;
+  padding-bottom: rem(80);
 }
 
 .doors a {
@@ -288,6 +288,8 @@
   align-items: end;
   margin: 0 auto rem(80);
   padding: 4.4rem 4.8rem 4rem;
+  width: 100%;
+  max-width: rem(1600);
   overflow: hidden;
   background:
     radial-gradient(80rem 28rem at 100% 120%, rgba(224, 199, 144, 0.18), transparent 60%),
@@ -340,7 +342,7 @@
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: 2rem;
   align-items: stretch;
-  padding-bottom: 6rem;
+  padding-bottom: rem(80);
 }
 
 .book__form {
@@ -390,7 +392,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 3rem;
-  padding-bottom: 6rem;
+  padding-bottom: rem(80);
 }
 
 .trail article { padding-top: 1.2rem; border-top: 1px solid var(--gold); }
@@ -399,7 +401,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  padding-bottom: 8rem;
+  padding-bottom: rem(80);
 }
 
 .note-row a {
