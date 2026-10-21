@@ -24,8 +24,13 @@
 .footer__contacts .footer__nav a:hover { color: #e7d7b4; }
 
 .frame {
-  width: min(148rem, calc(100% - 8rem));
+  width: 100%;
+  max-width: rem(1600);
   margin-inline: auto;
+
+  @include tablet {
+    padding: 0 rem(20);
+  }
 }
 
 .pagehead {
@@ -677,7 +682,7 @@
 }
 
 @media (max-width: 50em) {
-  .frame { width: calc(100% - 4rem); }
+  .frame { width: 100%; }
 
   .pagehead { padding-top: calc(var(--header) + 2.4rem); }
   .pagehead h1 { font-size: clamp(3.6rem, 12vw, 4.8rem); }
