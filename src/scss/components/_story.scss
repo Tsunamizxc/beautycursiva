@@ -294,12 +294,7 @@
 }
 
 .invite__sign {
-  display: block;
-  margin: 0 0 0.2rem;
-  font-family: var(--script);
-  font-size: clamp(6.4rem, 7vw, 9.6rem);
-  line-height: 0.75;
-  color: #e0c790;
+  display: none;
 }
 
 .invite h2 {
@@ -452,5 +447,4 @@
     gap: 2.4rem;
     padding: 2.8rem 2rem 2.4rem;
   }
-  .invite__sign { font-size: 7.2rem; }
 }

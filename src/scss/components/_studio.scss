@@ -1,6 +1,8 @@
 .offers,
 .crew,
-.studios {
+.studios,
+.comfort,
+.feedback {
   padding: rem(80) 0;
 }
 
@@ -13,6 +15,8 @@
 .offers h2,
 .crew h2,
 .studios h2,
+.comfort h2,
+.feedback h2,
 .offer h3,
 .master-card h3,
 .crew-director h3,
@@ -26,8 +30,92 @@
 
 .offers h2,
 .crew h2,
-.studios h2 {
+.studios h2,
+.comfort h2,
+.feedback h2 {
   max-width: min(12em, 100%);
+}
+
+.comfort__head {
+  max-width: rem(640);
+  margin-bottom: rem(36);
+}
+
+.comfort__head p:not(.eyebrow) {
+  margin-top: rem(14);
+  color: var(--soft);
+  font-size: rem(16);
+  line-height: 1.55;
+}
+
+.comfort__rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(rem(280), 32vw);
+  gap: rem(14);
+  overflow-x: auto;
+  padding: 0 max(rem(20), calc((100vw - rem(1600)) / 2 + rem(20))) rem(8);
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.comfort__shot {
+  margin: 0;
+  scroll-snap-align: start;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #e6e1d6;
+}
+
+.comfort__shot img {
+  display: block;
+  width: 100%;
+  height: rem(360);
+  object-fit: cover;
+}
+
+.feedback {
+  background-color: rgba(246, 242, 235, 0.92);
+  border-top: rem(1) solid rgba(92, 62, 24, 0.28);
+  border-bottom: rem(1) solid rgba(92, 62, 24, 0.28);
+}
+
+.feedback__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(rem(280), 0.9fr);
+  gap: rem(48);
+  align-items: start;
+}
+
+.feedback__copy p:not(.eyebrow) {
+  margin-top: rem(14);
+  max-width: 36ch;
+  color: var(--soft);
+  font-size: rem(16);
+  line-height: 1.55;
+}
+
+.feedback__form {
+  padding: rem(28);
+  background: var(--paper);
+  border: rem(1) solid var(--line);
+  border-radius: var(--radius);
+}
+
+.feedback__note {
+  margin-top: rem(14);
+  color: var(--muted);
+  font-size: rem(12);
+  line-height: 1.45;
+}
+
+.feedback .form-done h3 {
+  margin: 0 0 rem(8);
+  font-family: var(--serif);
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: rem(32);
 }
 
 .offers__head {
@@ -344,18 +432,12 @@
 
 .modal--lesson {
   width: min(rem(960), calc(100vw - rem(24)));
-  padding: rem(46) rem(16) rem(16);
+  padding: rem(46) rem(22) rem(22);
   background: #241f1a;
   color: #f6f1e8;
 }
 
 .modal--lesson .eyebrow { color: #c4a36a; }
-
-.modal--lesson .icon-btn {
-  color: #f6f1e8;
-  border-color: rgba(246, 241, 232, 0.35);
-  background: transparent;
-}
 
 .lesson-frame {
   position: relative;
@@ -432,7 +514,24 @@
 @media (max-width: 50em) {
   .offers,
   .crew,
-  .studios { padding: rem(56) 0; }
+  .studios,
+  .comfort,
+  .feedback { padding: rem(56) 0; }
+
+  .comfort__rail {
+    grid-auto-columns: minmax(rem(240), 78vw);
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+
+  .comfort__shot img { height: rem(280); }
+
+  .feedback__grid {
+    grid-template-columns: 1fr;
+    gap: rem(24);
+  }
+
+  .feedback__form { padding: rem(22) rem(18); }
 
   .offer__body,
   .offer--side {

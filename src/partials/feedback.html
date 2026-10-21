@@ -1,0 +1,44 @@
+<section class="feedback" id="feedback">
+  <div class="container feedback__grid">
+    <div class="feedback__copy">
+      <p class="eyebrow">Обратная связь</p>
+      <h2>Получите индивидуальную консультацию</h2>
+      <p>Оставьте контакты — менеджер свяжется в ближайшее время и ответит на вопросы по записи, услугам или обучению.</p>
+    </div>
+    <div class="feedback__form form-scope">
+      <div class="form-view">
+        <form class="js-booking" novalidate>
+          <label class="field">
+            <span>Имя</span>
+            <input class="input-reset" name="name" type="text" autocomplete="name" required>
+            <small class="field-error" hidden>Введите имя</small>
+          </label>
+          <label class="field">
+            <span>Телефон</span>
+            <input class="input-reset" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
+            <small class="field-error" hidden>Введите телефон целиком</small>
+          </label>
+          <label class="field">
+            <span>Город</span>
+            <select name="city">
+              <option>Казань</option>
+              <option>Москва</option>
+              <option>Набережные Челны</option>
+              <option>Чебоксары</option>
+              <option>Ульяновск</option>
+            </select>
+          </label>
+          <input type="hidden" name="service" value="Консультация">
+          <button class="btn btn-reset" type="submit">Отправить
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="feedback__note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+        </form>
+      </div>
+      <div class="form-done" hidden>
+        <h3>Заявка принята</h3>
+        <p class="form-done__text">Мы перезвоним в ближайшее время.</p>
+      </div>
+    </div>
+  </div>
+</section>
