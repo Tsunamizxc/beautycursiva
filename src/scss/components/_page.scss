@@ -538,20 +538,6 @@ body[data-page="home"] .about {
   border-top: rem(1) solid var(--line);
 }
 
-.services-more__head {
-  margin-bottom: rem(18);
-}
-
-.services-more__head h3 {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(rem(28), 2.4vw, rem(36));
-  font-weight: 400;
-  font-synthesis: none;
-  letter-spacing: -0.02em;
-  line-height: 1.12;
-}
-
 .services-more__list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
