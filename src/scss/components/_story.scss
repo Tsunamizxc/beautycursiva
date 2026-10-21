@@ -40,7 +40,6 @@
 .forwhom h2,
 .keeps h2,
 .method h2,
-.invite h2,
 .book h2,
 .trail h2,
 .note-row h2,
@@ -114,7 +113,6 @@
 .portrait__copy p,
 .method__intro p,
 .method__list p,
-.invite p,
 .book__form p,
 .trail p,
 .note-row p {
@@ -270,58 +268,6 @@
   text-shadow: 0 0.6rem 1.6rem rgba(20, 16, 10, 0.45);
 }
 
-.invite {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(22rem, 0.7fr);
-  gap: 4rem;
-  align-items: end;
-  margin: rem(40) auto;
-  padding: 4.4rem 4.8rem 4rem;
-  width: 100%;
-  max-width: rem(1600);
-  overflow: hidden;
-  background:
-    radial-gradient(80rem 28rem at 100% 120%, rgba(224, 199, 144, 0.18), transparent 60%),
-    var(--footer);
-  color: #f6f1e8;
-  border-radius: 2.4rem;
-}
-
-.invite__sign {
-  display: none;
-}
-
-.invite h2 {
-  max-width: 14em;
-  color: #f6f1e8;
-}
-
-.invite__lead p {
-  max-width: 34em;
-  color: rgba(246, 241, 232, 0.78);
-}
-
-.invite__action {
-  display: grid;
-  justify-items: start;
-  gap: 0.3rem;
-  padding-top: 1.6rem;
-  border-top: 1px solid rgba(224, 199, 144, 0.45);
-}
-
-.invite__action p {
-  margin: 0;
-  color: #f6f1e8;
-  font-family: var(--serif);
-  font-size: 2rem;
-  font-weight: 400;
-  font-synthesis: none;
-  line-height: 1.35;
-}
-
-.invite__action .btn { margin-top: 1.6rem; }
-
 .book {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
@@ -437,9 +383,4 @@
   .book__place { min-height: 36rem; }
   .book__form { padding: 2rem 1.6rem; }
   .syllabus dl div { grid-template-columns: minmax(0, 1fr); gap: 0.4rem; }
-  .invite {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2.4rem;
-    padding: 2.8rem 2rem 2.4rem;
-  }
 }
