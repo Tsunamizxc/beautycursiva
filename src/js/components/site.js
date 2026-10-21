@@ -314,15 +314,22 @@ export default () => {
       const scope = form.closest(".form-scope");
       const name = form.querySelector("[name=name]");
       const phone = form.querySelector("[name=phone]");
+      const privacy = form.querySelector("[name=privacy]");
       const nameError = name.parentElement.querySelector(".field-error");
       const phoneError = phone.parentElement.querySelector(".field-error");
+      const privacyError = privacy && privacy.closest("label")
+        ? privacy.closest("label").querySelector(".field-error")
+        : null;
       const nameValid = name.value.trim().length > 1;
       const validPhone = phoneOk(phone.value);
+      const privacyValid = !privacy || privacy.checked;
       nameError.hidden = nameValid;
       phoneError.hidden = validPhone;
+      if (privacyError) privacyError.hidden = privacyValid;
       name.toggleAttribute("aria-invalid", !nameValid);
       phone.toggleAttribute("aria-invalid", !validPhone);
-      if (!nameValid || !validPhone) return;
+      if (privacy) privacy.toggleAttribute("aria-invalid", !privacyValid);
+      if (!nameValid || !validPhone || !privacyValid) return;
       const serviceField = form.querySelector("[name=service]");
       const service = serviceField ? serviceField.value : "";
       const doneText = scope.querySelector(".form-done__text");
