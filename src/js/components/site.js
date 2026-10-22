@@ -336,7 +336,9 @@ export default () => {
       if (doneText) {
         doneText.textContent = service === "Обучение"
           ? "Программу обучения отправим после звонка. Мы свяжемся с вами в ближайшее время."
-          : "Мы перезвоним, чтобы подтвердить время консультации.";
+          : service === "Индивидуальная скидка"
+            ? "Мы перезвоним и расскажем про скидку в вашем городе."
+            : "Мы перезвоним, чтобы подтвердить время консультации.";
       }
       scope.querySelector(".form-view").hidden = true;
       scope.querySelector(".form-done").hidden = false;
@@ -415,6 +417,18 @@ export default () => {
     });
   }, { threshold: 0.16 });
   document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+  const perkBlocks = document.querySelectorAll(".perk");
+  if (perkBlocks.length) {
+    const perkObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        perkObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.22 });
+    perkBlocks.forEach((el) => perkObserver.observe(el));
+  }
 
   const stats = document.querySelector(".stats");
   if (stats) {

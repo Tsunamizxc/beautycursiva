@@ -1,0 +1,57 @@
+<section class="perk" id="perk" aria-label="Индивидуальная скидка">
+  <div class="container perk__grid">
+    <figure class="perk__media">
+      <div class="perk__frame">
+        <img src="img/salon-interior.jpg" alt="Интерьер студии Нины Заславской" loading="lazy">
+      </div>
+      <span class="perk__badge" aria-hidden="true">
+        <b>скидка</b>
+        <em>для вас</em>
+      </span>
+    </figure>
+
+    <div class="perk__content form-scope">
+      <div class="form-view">
+        <p class="eyebrow perk__line" style="--i: 0">Первый визит</p>
+        <h2 class="perk__line" style="--i: 1">Получите индивидуальную скидку на первое посещение в вашем городе</h2>
+        <p class="perk__lead perk__line" style="--i: 2">Оставьте имя и телефон — менеджер подберёт предложение под студию рядом с вами и перезвонит в рабочие часы.</p>
+
+        <form class="js-booking perk__form perk__line" style="--i: 3" novalidate>
+          <label class="perk__field">
+            <span>Имя</span>
+            <input class="input-reset" name="name" type="text" autocomplete="name" required>
+            <small class="field-error" hidden>Введите имя</small>
+          </label>
+          <label class="perk__field">
+            <span>Телефон</span>
+            <input class="input-reset" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
+            <small class="field-error" hidden>Введите телефон</small>
+          </label>
+          <label class="perk__field">
+            <span>Город</span>
+            <select name="city">
+              <option>Казань</option>
+              <option>Москва</option>
+              <option>Набережные Челны</option>
+              <option>Чебоксары</option>
+              <option>Ульяновск</option>
+            </select>
+          </label>
+          <input type="hidden" name="service" value="Индивидуальная скидка">
+          <label class="perk__consent">
+            <input type="checkbox" name="privacy" required>
+            <span>Согласен(на) на <a href="#" target="_blank" rel="noopener noreferrer">обработку персональных данных</a></span>
+            <small class="field-error" hidden>Нужно согласие</small>
+          </label>
+          <button class="btn btn-reset" type="submit">Получить скидку
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+      <div class="form-done perk__done" hidden>
+        <h3>Заявка принята</h3>
+        <p class="form-done__text">Мы перезвоним и расскажем про скидку в вашем городе.</p>
+      </div>
+    </div>
+  </div>
+</section>
